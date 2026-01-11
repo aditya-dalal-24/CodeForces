@@ -1,5 +1,5 @@
 package contest;
-import java.util.*;
+import java.util.Scannner;
 public class BlackPass {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -8,4 +8,5 @@ public class BlackPass {
             int k = sc.nextInt();
             int x = sc.nextInt();
             System.out.println(k * x + 1);
+
         }}}

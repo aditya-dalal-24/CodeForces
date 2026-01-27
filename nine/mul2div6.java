@@ -1,29 +1,22 @@
 package nine;
-
-import java.util.Scanner;
+import java.util.*;
 public class mul2div6 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        for(int i=1;i<=n;i++){
-            int x=sc.nextInt();
-            int c=0;
-            if(x==1){
-                System.out.println(0);
-            break; }
-            while(x!=1){
-                if(x%6==0){
-                    x=x/6;
-                    c++;
-                }
-                if(x%2==0 && x%3==0){
-                    x=x*2;
-                    c++;
-                }
-                if(x%2!=0 && x%3!=0) {System.out.println(-1);
-                break;}
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-->0) {
+            long n=sc.nextLong();
+            int c2=0, c3=0;
+            while (n%2==0) {
+                n/=2;
+                c2++;
             }
-            System.out.println(c);
-        }
-    }
-}
+            while (n%3==0) {
+                n/=3;
+                c3++;
+            }
+            if (n!=1 || c2>c3){
+                System.out.println(-1);
+            } else {
+                System.out.println((c3-c2)+c3);
+            }}}}
